@@ -6,11 +6,14 @@ const { Resend } = require('resend');
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendBookingNotification(booking) {
-  if (!process.env.RESEND_API_KEY) return;
+  if (!process.env.RESEND_API_KEY) {
+    console.log('[Email] Skipped: RESEND_API_KEY not set');
+    return;
+  }
 
-  await resend.emails.send({
+  const { data, error } = await resend.emails.send({
     from: 'Calmaria Bay Villa <onboarding@resend.dev>',
-    to: 'Calmariabayvilla@gmail.com',
+    to: ['Calmariabayvilla@gmail.com'],
     subject: `[Đặt phòng mới] #${booking.id} – ${booking.name} | ${booking.checkin} → ${booking.checkout}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden;">
@@ -69,6 +72,12 @@ async function sendBookingNotification(booking) {
       </div>
     `,
   });
+
+  if (error) {
+    console.error('[Email] Resend error:', JSON.stringify(error));
+    throw error;
+  }
+  console.log('[Email] Sent OK, id:', data?.id);
 }
 
 // Submit booking
