@@ -11,9 +11,12 @@ async function sendBookingNotification(booking) {
     return;
   }
 
+  const toEmail = process.env.NOTIFY_EMAIL || 'Calmariabayvilla@gmail.com';
+  console.log('[Email] Sending to:', toEmail);
+
   const { data, error } = await resend.emails.send({
     from: 'Calmaria Bay Villa <onboarding@resend.dev>',
-    to: ['Calmariabayvilla@gmail.com'],
+    to: [toEmail],
     subject: `[Đặt phòng mới] #${booking.id} – ${booking.name} | ${booking.checkin} → ${booking.checkout}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden;">
