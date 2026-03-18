@@ -11,7 +11,7 @@ async function sendBookingNotification(booking) {
     return;
   }
 
-  const toEmail = process.env.NOTIFY_EMAIL || 'Calmariabayvilla@gmail.com';
+  const toEmail = process.env.NOTIFY_EMAIL || 'calmariabayvilla@gmail.com';
   console.log('[Email] Sending to:', toEmail);
 
   const { data, error } = await resend.emails.send({
