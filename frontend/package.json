@@ -14,8 +14,8 @@
     "framer-motion": "^11.2.10",
     "lucide-react": "^0.383.0",
     "next": "^15.3.0",
-    "react": "^19",
-    "react-dom": "^19",
+    "react": "^18",
+    "react-dom": "^18",
     "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0"
   },
