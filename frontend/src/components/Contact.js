@@ -81,9 +81,9 @@ export default function Contact() {
             className="rounded-3xl overflow-hidden shadow-lg h-[450px] bg-gray-100"
           >
             <iframe
-              src="https://maps.google.com/maps?q=20.92105796459224,106.99210430583376&z=17&output=embed"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=106.9871%2C20.9181%2C106.9971%2C20.9241&layer=mapnik&marker=20.92105796459224%2C106.99210430583376"
               width="100%" height="100%" style={{ border: 0 }}
-              allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen="" loading="lazy"
               title="Calmaria Bay Villa Location"
             />
           </motion.div>
