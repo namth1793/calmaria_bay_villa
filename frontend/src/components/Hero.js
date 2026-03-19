@@ -64,7 +64,7 @@ export default function Hero() {
               {t.badge}
             </motion.div>
 
-            <h1 className="font-serif text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="font-serif text-5xl lg:text-6xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
               {t.title1}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-ocean-500 to-ocean-700">
                 {t.title2}
@@ -90,7 +90,7 @@ export default function Hero() {
             <div className="flex gap-8 mt-12 pt-8 border-t border-gray-100">
               {[
                 { value: '10', label: t.stat1 },
-                { value: '346m²', label: t.stat2 },
+                { value: '2,000m²', label: t.stat2 },
                 { value: '4.9★', label: t.stat3 },
               ].map((s, i) => (
                 <motion.div

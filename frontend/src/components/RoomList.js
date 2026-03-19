@@ -114,20 +114,20 @@ export default function RoomList() {
                     <Wind size={10} /> AC
                   </span>
                 </div>
-                <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                  <div>
+                <div className="pt-3 border-t border-gray-100">
+                  <div className="mb-3">
                     <span className="text-base font-bold text-ocean-700">
                       {room.price.toLocaleString('vi-VN')}
                     </span>
                     <span className="text-xs text-gray-400 ml-1">{t.night}</span>
                   </div>
-                  <div className="flex gap-1.5">
+                  <div className="grid grid-cols-2 gap-2">
                     <Link href={`/rooms/${room.id}`}
-                      className="px-2.5 py-1.5 border border-ocean-300 text-ocean-600 rounded-full text-xs font-semibold hover:bg-ocean-50 transition-colors">
+                      className="py-2 border border-ocean-300 text-ocean-600 rounded-xl text-xs font-semibold hover:bg-ocean-50 transition-colors text-center">
                       {t.detail}
                     </Link>
                     <Link href={`/rooms/${room.id}`}
-                      className="px-2.5 py-1.5 bg-gradient-to-r from-ocean-500 to-ocean-600 text-white rounded-full text-xs font-semibold hover:from-ocean-600 hover:to-ocean-700 transition-all shadow-sm">
+                      className="py-2 bg-gradient-to-r from-ocean-500 to-ocean-600 text-white rounded-xl text-xs font-semibold hover:from-ocean-600 hover:to-ocean-700 transition-all shadow-sm text-center">
                       {t.book}
                     </Link>
                   </div>
