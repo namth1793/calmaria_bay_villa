@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   ArrowLeft, MapPin, Users, BedDouble, Bath, LayoutGrid,
-  Star, ChevronLeft, ChevronRight, X, Check, Calendar, Phone,
+  Star, ChevronLeft, ChevronRight, X, Check, Phone,
   Wifi, Utensils, Tv, Wind, Coffee, Lock, Droplets, ShowerHead
 } from 'lucide-react';
 
@@ -429,14 +429,23 @@ export default function RoomDetailClient({ room, allRooms }) {
             <section id="contact-detail" className="border-t border-sand-200 pt-8">
               <h2 className="font-serif text-2xl font-bold text-gray-900 mb-5">Địa chỉ</h2>
               <p className="text-gray-600 text-sm mb-4">{room.address}</p>
-              <div className="rounded-2xl overflow-hidden h-64 bg-gray-100 shadow-sm">
+              <a
+                href="https://www.openstreetmap.org/?mlat=20.92105796459224&mlon=106.99210430583376#map=17/20.92105796459224/106.99210430583376"
+                target="_blank" rel="noopener noreferrer"
+                className="block relative rounded-2xl overflow-hidden h-64 bg-gray-100 shadow-sm group"
+              >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.7!2d107.0!3d20.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDU3JzAwLjAiTiAxMDfCsDAwJzAwLjAiRQ!5e0!3m2!1svi!2svn!4v1620000000000!5m2!1svi!2svn"
-                  width="100%" height="100%" style={{ border: 0 }}
-                  allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=106.9871%2C20.9181%2C106.9971%2C20.9241&layer=mapnik&marker=20.92105796459224%2C106.99210430583376"
+                  width="100%" height="100%" style={{ border: 0, pointerEvents: 'none' }}
+                  loading="lazy"
                   title="Villa Location"
                 />
-              </div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-end justify-end p-3">
+                  <span className="bg-white/90 backdrop-blur-sm text-ocean-700 text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                    <MapPin size={12} /> Mở bản đồ →
+                  </span>
+                </div>
+              </a>
             </section>
 
             {/* Policies */}
