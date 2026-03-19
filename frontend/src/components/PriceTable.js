@@ -33,14 +33,14 @@ const NOTES = {
     'Giá phòng gồm 2 người lớn và 1 trẻ em dưới 7 tuổi.',
     'Trẻ từ 7–11 tuổi: phụ thu 200,000 VNĐ / bé / đêm.',
     'Từ 12 tuổi trở lên: phụ thu 400,000 VNĐ / người / đêm (tính bằng người lớn).',
-    'Villa cho phép thú cưng nhưng không mang vào phòng vì nhiều khách dị ứng.',
+    'Villa không cho phép thú cưng mang vào.',
     'Giá trên chưa bao gồm ăn sáng và tối. Vui lòng note nếu có nhu cầu để báo giá riêng.',
   ],
   en: [
     'Room rate includes 2 adults and 1 child under 7 years old.',
     'Children aged 7–11: surcharge of 200,000 VND / child / night.',
     'Aged 12 and above: surcharge of 400,000 VND / person / night (same as adults).',
-    'Pets are welcome at the villa but are not allowed inside rooms due to guest allergies.',
+    'Pets are not allowed in the villa.',
     'Rates above do not include breakfast or dinner. Please note if interested for a separate quote.',
   ],
 };
