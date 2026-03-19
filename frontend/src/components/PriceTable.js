@@ -46,8 +46,8 @@ const NOTES = {
 };
 
 const T = {
-  vi: { title: 'Bảng giá Calmaria Bay Villa', sub: 'Giá niêm yết đã bao gồm thuế và các tiện ích cơ bản', noteTitle: 'Lưu ý:' },
-  en: { title: 'Calmaria Bay Villa Pricing', sub: 'Listed prices include tax and basic amenities', noteTitle: 'Notes:' },
+  vi: { title: 'Bảng giá Calmaria Bay Villa', sub: 'Giá niêm yết chưa bao gồm thuế', noteTitle: 'Lưu ý:' },
+  en: { title: 'Calmaria Bay Villa Pricing', sub: 'Listed prices do not include tax', noteTitle: 'Notes:' },
 };
 
 export default function PriceTable() {
