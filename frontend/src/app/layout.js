@@ -1,4 +1,5 @@
 import './globals.css';
+import Providers from './providers';
 
 export const metadata = {
   title: 'Calmaria Bay Villa | Luxury Beachfront Villa Hạ Long',
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="vi">
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

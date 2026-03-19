@@ -1,118 +1,134 @@
 'use client';
+import { useLang } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
-import { Eye, Users, UtensilsCrossed, Waves, Wifi } from 'lucide-react';
+import { Eye, Users, Wifi, Wind } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { rooms } from '@/data/rooms';
 
-const rooms = [
-  {
-    id: 1, name: 'Phòng 101 / 301', size: '25m²', guests: 2, price: '1,600,000',
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&auto=format&fit=crop',
-    amenities: ['wifi', 'pool', 'kitchen', 'seaview'],
-    desc: 'Phòng tiêu chuẩn view vườn, không gian thoáng mát'
+const T = {
+  vi: {
+    title: 'Danh sách phòng',
+    sub: 'Khám phá 10 phòng nghỉ sang trọng tại Calmaria Bay Villa — mỗi phòng đều mang đến trải nghiệm nghỉ dưỡng đặc biệt.',
+    balcony: 'Ban công',
+    detail: 'Chi tiết',
+    book: 'Đặt ngay',
+    night: 'đ/đêm',
+    garden: 'Hướng sân vườn',
+    sea: 'Hướng biển',
+    hasBalcony: ', có ban công',
   },
-  {
-    id: 2, name: 'Phòng 102 / 203 / 305', size: '32m²', guests: 3, price: '2,000,000',
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&auto=format&fit=crop',
-    amenities: ['wifi', 'pool', 'kitchen', 'seaview'],
-    desc: 'Phòng superior, view biển tuyệt đẹp'
+  en: {
+    title: 'Our Rooms',
+    sub: 'Explore 10 elegant rooms at Calmaria Bay Villa — each offering a unique and memorable stay experience.',
+    balcony: 'Balcony',
+    detail: 'Details',
+    book: 'Book Now',
+    night: 'VND/night',
+    garden: 'Garden View',
+    sea: 'Sea View',
+    hasBalcony: ', with balcony',
   },
-  {
-    id: 3, name: 'Phòng 201 / 202 / 302', size: '40m²', guests: 4, price: '2,600,000',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format&fit=crop',
-    amenities: ['wifi', 'pool', 'kitchen', 'seaview'],
-    desc: 'Phòng deluxe rộng rãi, ban công nhìn ra hồ bơi'
-  },
-  {
-    id: 4, name: 'Phòng 303 / 304', size: '40m²', guests: 4, price: '2,600,000',
-    image: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=600&auto=format&fit=crop',
-    amenities: ['wifi', 'pool', 'kitchen', 'seaview'],
-    desc: 'Phòng deluxe góc, tầm nhìn toàn cảnh vịnh'
-  },
-  {
-    id: 5, name: 'Phòng 101 / 301', size: '25m²', guests: 2, price: '1,600,000',
-    image: 'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=600&auto=format&fit=crop',
-    amenities: ['wifi', 'pool', 'kitchen', 'seaview'],
-    desc: 'Phòng tiêu chuẩn tầng 3, không gian thoáng đãng'
-  },
-  {
-    id: 6, name: 'Phòng 102 / 203 / 305', size: '32m²', guests: 3, price: '2,000,000',
-    image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&auto=format&fit=crop',
-    amenities: ['wifi', 'pool', 'kitchen', 'seaview'],
-    desc: 'Phòng superior view biển, ban công rộng'
-  },
-];
-
-const amenityIcons = {
-  wifi: { icon: <Wifi size={14} />, label: 'Wifi' },
-  pool: { icon: <Waves size={14} />, label: 'Hồ bơi' },
-  kitchen: { icon: <UtensilsCrossed size={14} />, label: 'Bếp' },
-  seaview: { icon: <Eye size={14} />, label: 'View biển' },
 };
 
 export default function RoomList() {
+  const { lang } = useLang();
+  const t = T[lang];
+
+  const getView = (room) => {
+    const base = room.view.includes('biển') ? t.sea : t.garden;
+    return base + (room.balcony ? t.hasBalcony : '');
+  };
+
   return (
-    <section id="rooms" className="py-20 bg-white">
+    <section id="rooms" className="py-24 bg-white relative">
+      {/* Subtle top decoration */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-ocean-300 to-transparent opacity-30" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-14"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Danh sách phòng</h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
-            Khám phá các phòng nghỉ sang trọng tại Calmaria Bay Villa — mỗi phòng đều mang đến trải nghiệm nghỉ dưỡng đặc biệt.
-          </p>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="h-0.5 w-8 bg-ocean-500 rounded-full" />
+            <span className="text-ocean-500 text-sm font-semibold uppercase tracking-wider">10 Rooms</span>
+            <div className="h-0.5 w-8 bg-ocean-500 rounded-full" />
+          </div>
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-gray-900 mb-4">{t.title}</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto text-lg">{t.sub}</p>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {rooms.map((room, i) => (
             <motion.div
               key={room.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-sand-100 overflow-hidden group"
+              transition={{ delay: (i % 4) * 0.07 }}
+              className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group hover:-translate-y-1"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image src={room.image} alt={room.name} fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-ocean-700">
-                  {room.size}
+                <Image
+                  src={room.images[0]}
+                  alt={room.name}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-600"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Badges */}
+                <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+                  <span className="bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full text-xs font-bold text-ocean-700 shadow-sm">
+                    {room.size}
+                  </span>
+                  {room.balcony && (
+                    <span className="bg-gradient-to-r from-amber-400 to-amber-500 px-2.5 py-1 rounded-full text-xs font-bold text-white shadow-sm">
+                      {t.balcony}
+                    </span>
+                  )}
                 </div>
               </div>
-              <div className="p-5">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="font-semibold text-gray-900 text-lg">{room.name}</h3>
-                  <div className="flex items-center gap-1 text-gray-500 text-sm">
-                    <Users size={14} />
+
+              <div className="p-4">
+                <div className="flex items-start justify-between mb-1.5">
+                  <h3 className="font-bold text-gray-900 text-base group-hover:text-ocean-700 transition-colors">{room.name}</h3>
+                  <div className="flex items-center gap-1 text-gray-400 text-xs shrink-0 ml-2 bg-gray-50 px-2 py-1 rounded-full">
+                    <Users size={12} />
                     <span>{room.guests}</span>
                   </div>
                 </div>
-                <p className="text-sm text-gray-500 mb-4">{room.desc}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {room.amenities.map(a => (
-                    <span key={a} className="flex items-center gap-1 bg-sand-50 text-gray-600 px-2.5 py-1 rounded-full text-xs">
-                      {amenityIcons[a].icon} {amenityIcons[a].label}
-                    </span>
-                  ))}
+                <div className="flex items-center gap-1.5 text-gray-400 text-xs mb-3">
+                  <Eye size={11} />
+                  <span>{getView(room)}</span>
                 </div>
-                <div className="flex items-center justify-between pt-4 border-t border-sand-100">
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  <span className="flex items-center gap-1 bg-ocean-50 text-ocean-600 px-2 py-0.5 rounded-full text-xs font-medium">
+                    <Wifi size={10} /> Wifi
+                  </span>
+                  <span className="flex items-center gap-1 bg-ocean-50 text-ocean-600 px-2 py-0.5 rounded-full text-xs font-medium">
+                    <Wind size={10} /> AC
+                  </span>
+                </div>
+                <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                   <div>
-                    <span className="text-xl font-bold text-ocean-700">{room.price}</span>
-                    <span className="text-sm text-gray-400 ml-1">VNĐ/đêm</span>
+                    <span className="text-base font-bold text-ocean-700">
+                      {room.price.toLocaleString('vi-VN')}
+                    </span>
+                    <span className="text-xs text-gray-400 ml-1">{t.night}</span>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex gap-1.5">
                     <Link href={`/rooms/${room.id}`}
-                      className="px-3 py-2 border border-ocean-400 text-ocean-600 rounded-full text-sm font-medium hover:bg-ocean-50 transition-colors">
-                      Chi tiết
+                      className="px-2.5 py-1.5 border border-ocean-300 text-ocean-600 rounded-full text-xs font-semibold hover:bg-ocean-50 transition-colors">
+                      {t.detail}
                     </Link>
                     <Link href={`/rooms/${room.id}`}
-                      className="px-3 py-2 bg-ocean-500 text-white rounded-full text-sm font-medium hover:bg-ocean-600 transition-colors">
-                      Đặt ngay
+                      className="px-2.5 py-1.5 bg-gradient-to-r from-ocean-500 to-ocean-600 text-white rounded-full text-xs font-semibold hover:from-ocean-600 hover:to-ocean-700 transition-all shadow-sm">
+                      {t.book}
                     </Link>
                   </div>
                 </div>
