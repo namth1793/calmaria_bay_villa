@@ -6,27 +6,27 @@ import { useState } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 
 const IMAGES_VI = [
-  { src: '/assets/BỂ BƠI/DSC_5700.jpg', alt: 'Hồ bơi', span: 'col-span-2 row-span-2' },
-  { src: '/assets/PHÒNG KHÁCH/DSC_5477-HDR1.jpg', alt: 'Phòng khách', span: '' },
-  { src: '/assets/PHÒNG KHÁCH/DSC_5486-HDR1.jpg', alt: 'Phòng khách', span: '' },
-  { src: '/assets/BẾP/DSC_5549-HDR1.jpg', alt: 'Nhà bếp', span: '' },
-  { src: '/assets/BẾP/DSC_5555-HDR.jpg', alt: 'Nhà bếp', span: '' },
-  { src: '/assets/VƯỜN HOA/DSC_5379.jpg', alt: 'Vườn hoa', span: '' },
-  { src: '/assets/SÂN THƯỢNG/DSC_5365-HDR.jpg', alt: 'Sân thượng', span: '' },
-  { src: '/assets/SÂN THƯỢNG/DSC_5726.jpg', alt: 'Sân thượng', span: '' },
-  { src: '/assets/BỂ BƠI/DSC_5816.jpg', alt: 'Hồ bơi', span: '' },
+  { src: '/assets/be-boi/DSC_5700.jpg', alt: 'Hồ bơi', span: 'col-span-2 row-span-2' },
+  { src: '/assets/phong-khach/DSC_5477-HDR1.jpg', alt: 'Phòng khách', span: '' },
+  { src: '/assets/phong-khach/DSC_5486-HDR1.jpg', alt: 'Phòng khách', span: '' },
+  { src: '/assets/bep/DSC_5549-HDR1.jpg', alt: 'Nhà bếp', span: '' },
+  { src: '/assets/bep/DSC_5555-HDR.jpg', alt: 'Nhà bếp', span: '' },
+  { src: '/assets/vuon-hoa/DSC_5379.jpg', alt: 'Vườn hoa', span: '' },
+  { src: '/assets/san-thuong/DSC_5365-HDR.jpg', alt: 'Sân thượng', span: '' },
+  { src: '/assets/san-thuong/DSC_5726.jpg', alt: 'Sân thượng', span: '' },
+  { src: '/assets/be-boi/DSC_5816.jpg', alt: 'Hồ bơi', span: '' },
 ];
 
 const IMAGES_EN = [
-  { src: '/assets/BỂ BƠI/DSC_5700.jpg', alt: 'Swimming Pool', span: 'col-span-2 row-span-2' },
-  { src: '/assets/PHÒNG KHÁCH/DSC_5477-HDR1.jpg', alt: 'Living Room', span: '' },
-  { src: '/assets/PHÒNG KHÁCH/DSC_5486-HDR1.jpg', alt: 'Living Room', span: '' },
-  { src: '/assets/BẾP/DSC_5549-HDR1.jpg', alt: 'Kitchen', span: '' },
-  { src: '/assets/BẾP/DSC_5555-HDR.jpg', alt: 'Kitchen', span: '' },
-  { src: '/assets/VƯỜN HOA/DSC_5379.jpg', alt: 'Garden', span: '' },
-  { src: '/assets/SÂN THƯỢNG/DSC_5365-HDR.jpg', alt: 'Rooftop', span: '' },
-  { src: '/assets/SÂN THƯỢNG/DSC_5726.jpg', alt: 'Rooftop', span: '' },
-  { src: '/assets/BỂ BƠI/DSC_5816.jpg', alt: 'Swimming Pool', span: '' },
+  { src: '/assets/be-boi/DSC_5700.jpg', alt: 'Swimming Pool', span: 'col-span-2 row-span-2' },
+  { src: '/assets/phong-khach/DSC_5477-HDR1.jpg', alt: 'Living Room', span: '' },
+  { src: '/assets/phong-khach/DSC_5486-HDR1.jpg', alt: 'Living Room', span: '' },
+  { src: '/assets/bep/DSC_5549-HDR1.jpg', alt: 'Kitchen', span: '' },
+  { src: '/assets/bep/DSC_5555-HDR.jpg', alt: 'Kitchen', span: '' },
+  { src: '/assets/vuon-hoa/DSC_5379.jpg', alt: 'Garden', span: '' },
+  { src: '/assets/san-thuong/DSC_5365-HDR.jpg', alt: 'Rooftop', span: '' },
+  { src: '/assets/san-thuong/DSC_5726.jpg', alt: 'Rooftop', span: '' },
+  { src: '/assets/be-boi/DSC_5816.jpg', alt: 'Swimming Pool', span: '' },
 ];
 
 const T = {
