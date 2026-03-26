@@ -13,11 +13,9 @@ export const rooms = [
     balcony: false,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&auto=format&fit=crop',
+      '/assets/P101/DSC_5394-HDR.jpg',
+      '/assets/P101/DSC_5409-HDR.jpg',
+      '/assets/P101/DSC_5415-HDR.jpg',
     ],
     about: `Phòng 101 là căn phòng tiêu chuẩn hướng sân vườn tại tầng 1 của Calmaria Bay Villa. Phòng rộng 25m² với thiết kế hiện đại, thoáng mát, phù hợp cho 2 người lớn và 1 trẻ em dưới 7 tuổi.\n\nNằm ngay tại khu vực trung tâm của villa, phòng có thể tiếp cận nhanh đến:\n- Hồ bơi riêng của villa\n- Vườn cây xanh mát\n- Sân bóng rổ và sân đá bóng mini\n- Bãi biển riêng cách 30m\n\nPhù hợp cho cặp đôi hoặc gia đình nhỏ tìm kiếm không gian nghỉ dưỡng yên tĩnh, sang trọng tại Hạ Long.`,
     bedrooms_detail: [
@@ -51,11 +49,9 @@ export const rooms = [
     balcony: true,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&auto=format&fit=crop',
+      '/assets/P301/DSC_5077-HDR.jpg',
+      '/assets/P301/DSC_5083-HDR.jpg',
+      '/assets/P301/DSC_5089-HDR.jpg',
     ],
     about: `Phòng 301 là căn phòng hướng sân vườn có ban công tại tầng 3 của Calmaria Bay Villa. Phòng rộng 25m² với ban công riêng thoáng mát — nơi lý tưởng để thư giãn buổi sáng cùng tách cà phê.\n\nĐiểm nổi bật:\n- Ban công riêng nhìn ra sân vườn xanh mát\n- Vị trí tầng cao, không gian yên tĩnh\n- Tiếp cận nhanh đến hồ bơi và các tiện ích villa\n- Bãi biển riêng cách 30m\n\nPhù hợp cho 2 người lớn và 1 trẻ em dưới 7 tuổi.`,
     bedrooms_detail: [
@@ -88,11 +84,9 @@ export const rooms = [
     balcony: false,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop',
+      '/assets/P102/DSC_5436-HDR.jpg',
+      '/assets/P102/DSC_5439-HDR1.jpg',
+      '/assets/P102/DSC_5448-HDR.jpg',
     ],
     about: `Phòng 102 là phòng Superior rộng 32m² hướng sân vườn tại tầng 1. Không gian rộng rãi hơn so với phòng tiêu chuẩn, phù hợp cho gia đình 2 người lớn và 1 trẻ em dưới 7 tuổi.\n\nĐiểm nổi bật:\n- Diện tích 32m², không gian rộng thoáng\n- View sân vườn yên tĩnh, mát mẻ\n- Gần hồ bơi và khu tiện ích\n- Bãi biển riêng cách 30m\n\nLựa chọn lý tưởng cho những ai muốn không gian rộng hơn với mức giá hợp lý.`,
     bedrooms_detail: [
@@ -125,11 +119,9 @@ export const rooms = [
     balcony: false,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop',
+      '/assets/P203/DSC_4812-HDR.jpg',
+      '/assets/P203/DSC_4815-HDR.jpg',
+      '/assets/P203/DSC_4821-HDR.jpg',
     ],
     about: `Phòng 203 là phòng Superior rộng 32m² hướng sân vườn tại tầng 2. Vị trí tầng 2 mang lại sự riêng tư tốt hơn và không khí trong lành.\n\nĐiểm nổi bật:\n- Tầng 2, không gian yên tĩnh và riêng tư\n- View sân vườn xanh mát\n- Diện tích 32m², thoải mái cho 3 khách\n- Tiếp cận dễ dàng đến hồ bơi và tiện ích\n\nPhù hợp cho 2 người lớn và 1 trẻ em dưới 7 tuổi.`,
     bedrooms_detail: [
@@ -162,11 +154,9 @@ export const rooms = [
     balcony: false,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop',
+      '/assets/P305/DSC_5294-HDR.jpg',
+      '/assets/P305/DSC_5315-HDR.jpg',
+      '/assets/P305/DSC_5330-HDR.jpg',
     ],
     about: `Phòng 305 là phòng Superior rộng 32m² hướng sân vườn tại tầng 3. Vị trí tầng cao nhất mang đến không gian yên tĩnh nhất và tầm nhìn thoáng rộng ra khu vườn.\n\nĐiểm nổi bật:\n- Tầng 3, yên tĩnh và riêng tư tối ưu\n- View sân vườn và không gian xung quanh\n- Diện tích 32m², thoải mái\n- Gần hồ bơi và khu tiện ích villa\n\nPhù hợp cho 2 người lớn và 1 trẻ em dưới 7 tuổi.`,
     bedrooms_detail: [
@@ -199,11 +189,8 @@ export const rooms = [
     balcony: false,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&auto=format&fit=crop',
+      '/assets/P201/DSC_5004-HDR.jpg',
+      '/assets/P201/DSC_5016-HDR.jpg',
     ],
     about: `Phòng 201 là phòng Deluxe cao cấp rộng 40m² hướng biển tại tầng 2, mang đến tầm nhìn tuyệt đẹp ra vịnh Hạ Long.\n\nĐiểm nổi bật:\n- Diện tích 40m², không gian sang trọng rộng rãi\n- View biển trực tiếp nhìn ra vịnh Hạ Long\n- Vị trí tầng 2, tầm nhìn khoáng đạt\n- Bãi biển riêng chỉ cách 30m đi bộ\n\nPhù hợp cho 2 người lớn và 1 trẻ em dưới 7 tuổi muốn tận hưởng không gian rộng và view biển đẹp.`,
     bedrooms_detail: [
@@ -236,11 +223,9 @@ export const rooms = [
     balcony: false,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&auto=format&fit=crop',
+      '/assets/P303/DSC_5176-HDR1.jpg',
+      '/assets/P303/DSC_5188-HDR.jpg',
+      '/assets/P303/DSC_5200-HDR.jpg',
     ],
     about: `Phòng 303 là phòng Deluxe rộng 40m² hướng biển tại tầng 3. Vị trí tầng cao mang đến tầm nhìn panorama rộng hơn ra vịnh Hạ Long.\n\nĐiểm nổi bật:\n- Diện tích 40m², không gian rộng rãi sang trọng\n- Tầng 3 – tầm nhìn biển khoáng đạt hơn\n- View trực tiếp ra vịnh Hạ Long\n- Bãi biển riêng chỉ cách 30m\n\nPhù hợp cho 2 người lớn và 1 trẻ em dưới 7 tuổi.`,
     bedrooms_detail: [
@@ -273,11 +258,9 @@ export const rooms = [
     balcony: true,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop',
+      '/assets/P202/DSC_4953-HDR11.jpg',
+      '/assets/P202/DSC_4959-HDR.jpg',
+      '/assets/P202/DSC_4959-HDR11.jpg',
     ],
     about: `Phòng 202 là phòng Deluxe Premium rộng 40m² hướng biển có ban công tại tầng 2. Đây là một trong những phòng cao cấp nhất với ban công riêng nhìn thẳng ra vịnh Hạ Long.\n\nĐiểm nổi bật:\n- Diện tích 40m², không gian sang trọng\n- Ban công riêng hướng biển – thưởng thức bình minh tuyệt đẹp\n- View trực tiếp ra vịnh Hạ Long từ ban công\n- Bãi biển riêng chỉ cách 30m\n\nLựa chọn lý tưởng nhất cho cặp đôi hưởng tuần trăng mật tại Hạ Long.`,
     bedrooms_detail: [
@@ -311,11 +294,9 @@ export const rooms = [
     balcony: true,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&auto=format&fit=crop',
+      '/assets/P302/DSC_5120-HDR1.jpg',
+      '/assets/P302/DSC_5141-HDR.jpg',
+      '/assets/P302/DSC_5150-HDR.jpg',
     ],
     about: `Phòng 302 là phòng Deluxe Premium rộng 40m² hướng biển có ban công tại tầng 3. Vị trí tầng cao cùng ban công riêng mang lại tầm nhìn panorama ra vịnh Hạ Long.\n\nĐiểm nổi bật:\n- Tầng 3, tầm nhìn biển cao và rộng nhất\n- Ban công riêng hướng biển – không gian ngoài trời lý tưởng\n- View panorama vịnh Hạ Long từ ban công\n- Bãi biển riêng chỉ cách 30m\n\nPhù hợp cho 2 người lớn và 1 trẻ em dưới 7 tuổi.`,
     bedrooms_detail: [
@@ -348,11 +329,10 @@ export const rooms = [
     balcony: true,
     address: '05BT Calmaria Bay Villa, Cảng Quốc Tế Tuần Châu, Hạ Long, Quảng Ninh',
     images: [
-      'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop',
+      '/assets/P304/DSC_5228-HDR1.jpg',
+      '/assets/P304/DSC_5237-HDR.jpg',
+      '/assets/P304/DSC_5255-HDR.jpg',
+      '/assets/P304/DSC_5266-HDR.jpg',
     ],
     about: `Phòng 304 là phòng Deluxe Premium rộng 40m² hướng biển có ban công tại tầng 3. Cùng tầng với phòng 302, 303 – đây là khu phòng sang trọng nhất với tầm nhìn toàn cảnh vịnh.\n\nĐiểm nổi bật:\n- Diện tích 40m², không gian rộng và sang trọng\n- Ban công riêng hướng biển tầng 3\n- Tầm nhìn toàn cảnh vịnh Hạ Long\n- Bãi biển riêng chỉ cách 30m\n\nPhù hợp cho 2 người lớn và 1 trẻ em dưới 7 tuổi muốn trải nghiệm cao cấp nhất.`,
     bedrooms_detail: [

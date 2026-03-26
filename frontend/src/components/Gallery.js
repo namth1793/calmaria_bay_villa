@@ -6,27 +6,27 @@ import { useState } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 
 const IMAGES_VI = [
-  { src: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop', alt: 'Phòng ngủ luxury', span: 'col-span-2 row-span-2' },
-  { src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&auto=format&fit=crop', alt: 'Hồ bơi', span: '' },
-  { src: 'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&auto=format&fit=crop', alt: 'Phòng khách', span: '' },
-  { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop', alt: 'Phòng ăn', span: '' },
-  { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop', alt: 'View biển', span: '' },
-  { src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&auto=format&fit=crop', alt: 'Vườn xanh', span: '' },
-  { src: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&auto=format&fit=crop', alt: 'Bãi biển', span: '' },
-  { src: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&auto=format&fit=crop', alt: 'Toàn cảnh', span: '' },
-  { src: 'https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&auto=format&fit=crop', alt: 'Nhà bếp', span: '' },
+  { src: '/assets/BỂ BƠI/DSC_5700.jpg', alt: 'Hồ bơi', span: 'col-span-2 row-span-2' },
+  { src: '/assets/PHÒNG KHÁCH/DSC_5477-HDR1.jpg', alt: 'Phòng khách', span: '' },
+  { src: '/assets/PHÒNG KHÁCH/DSC_5486-HDR1.jpg', alt: 'Phòng khách', span: '' },
+  { src: '/assets/BẾP/DSC_5549-HDR1.jpg', alt: 'Nhà bếp', span: '' },
+  { src: '/assets/BẾP/DSC_5555-HDR.jpg', alt: 'Nhà bếp', span: '' },
+  { src: '/assets/VƯỜN HOA/DSC_5379.jpg', alt: 'Vườn hoa', span: '' },
+  { src: '/assets/SÂN THƯỢNG/DSC_5365-HDR.jpg', alt: 'Sân thượng', span: '' },
+  { src: '/assets/SÂN THƯỢNG/DSC_5726.jpg', alt: 'Sân thượng', span: '' },
+  { src: '/assets/BỂ BƠI/DSC_5816.jpg', alt: 'Hồ bơi', span: '' },
 ];
 
 const IMAGES_EN = [
-  { src: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop', alt: 'Luxury Bedroom', span: 'col-span-2 row-span-2' },
-  { src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&auto=format&fit=crop', alt: 'Swimming Pool', span: '' },
-  { src: 'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&auto=format&fit=crop', alt: 'Living Room', span: '' },
-  { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop', alt: 'Dining Area', span: '' },
-  { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop', alt: 'Sea View', span: '' },
-  { src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&auto=format&fit=crop', alt: 'Garden', span: '' },
-  { src: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&auto=format&fit=crop', alt: 'Private Beach', span: '' },
-  { src: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&auto=format&fit=crop', alt: 'Aerial View', span: '' },
-  { src: 'https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&auto=format&fit=crop', alt: 'Kitchen', span: '' },
+  { src: '/assets/BỂ BƠI/DSC_5700.jpg', alt: 'Swimming Pool', span: 'col-span-2 row-span-2' },
+  { src: '/assets/PHÒNG KHÁCH/DSC_5477-HDR1.jpg', alt: 'Living Room', span: '' },
+  { src: '/assets/PHÒNG KHÁCH/DSC_5486-HDR1.jpg', alt: 'Living Room', span: '' },
+  { src: '/assets/BẾP/DSC_5549-HDR1.jpg', alt: 'Kitchen', span: '' },
+  { src: '/assets/BẾP/DSC_5555-HDR.jpg', alt: 'Kitchen', span: '' },
+  { src: '/assets/VƯỜN HOA/DSC_5379.jpg', alt: 'Garden', span: '' },
+  { src: '/assets/SÂN THƯỢNG/DSC_5365-HDR.jpg', alt: 'Rooftop', span: '' },
+  { src: '/assets/SÂN THƯỢNG/DSC_5726.jpg', alt: 'Rooftop', span: '' },
+  { src: '/assets/BỂ BƠI/DSC_5816.jpg', alt: 'Swimming Pool', span: '' },
 ];
 
 const T = {

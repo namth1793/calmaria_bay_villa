@@ -116,7 +116,7 @@ export default function Hero() {
             {/* Main image */}
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl shadow-ocean-200/30">
               <Image
-                src="https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=900&auto=format&fit=crop"
+                src="/assets/HERO BANNER.jpg"
                 alt="Calmaria Bay Villa"
                 fill
                 className="object-cover"
