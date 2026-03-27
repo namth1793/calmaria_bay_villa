@@ -173,10 +173,6 @@ export default function Header() {
                 <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-ocean-500 group-hover:w-full transition-all duration-300" />
               </button>
               <LangToggle />
-              <a href="#booking"
-                className="ml-1 px-5 py-2.5 bg-gradient-to-r from-ocean-500 to-ocean-600 text-white rounded-full text-sm font-semibold hover:from-ocean-600 hover:to-ocean-700 transition-all shadow-md shadow-ocean-200 hover:shadow-lg hover:shadow-ocean-300 hover:-translate-y-0.5">
-                {t.book}
-              </a>
             </nav>
 
             {/* Mobile right */}
@@ -205,10 +201,6 @@ export default function Header() {
                 className="flex items-center w-full py-3 px-3 text-gray-700 hover:bg-ocean-50 hover:text-ocean-600 rounded-xl transition-colors font-medium">
                 {t.contact}
               </button>
-              <a href="#booking" onClick={() => setMenuOpen(false)}
-                className="block mt-2 py-3 px-3 bg-gradient-to-r from-ocean-500 to-ocean-600 text-white rounded-xl text-center font-semibold shadow-md">
-                {t.book}
-              </a>
             </div>
           </div>
         )}
