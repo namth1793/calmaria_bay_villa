@@ -68,6 +68,20 @@ const AREAS = {
         '/assets/vuon-hoa/DSC_5823.jpg',
       ],
     },
+    {
+      id: 'san-bong-ro',
+      icon: '🏀',
+      name: 'Sân bóng rổ',
+      desc: 'Sân bóng rổ chuyên nghiệp rộng rãi nằm trong khuôn viên villa. Không gian vận động lý tưởng cho cả gia đình — từ trận đấu thân mật đến những giờ tập luyện sôi động bên nhau.',
+      images: [
+        '/assets/san-bong-ro/DJI_0012-Pano.jpg',
+        '/assets/san-bong-ro/DJI_0014.jpg',
+        '/assets/san-bong-ro/DJI_0016.jpg',
+        '/assets/san-bong-ro/DJI_0029.jpg',
+        '/assets/san-bong-ro/DJI_0983.jpg',
+        '/assets/san-bong-ro/DJI_0992.jpg',
+      ],
+    },
   ],
   en: [
     {
@@ -129,6 +143,20 @@ const AREAS = {
         '/assets/vuon-hoa/DSC_5379.jpg',
         '/assets/vuon-hoa/DSC_5784.jpg',
         '/assets/vuon-hoa/DSC_5823.jpg',
+      ],
+    },
+    {
+      id: 'san-bong-ro',
+      icon: '🏀',
+      name: 'Basketball Court',
+      desc: 'A full-size professional basketball court set within the villa grounds. The perfect space for active fun — whether it\'s a friendly match or a spirited game with the whole group.',
+      images: [
+        '/assets/san-bong-ro/DJI_0012-Pano.jpg',
+        '/assets/san-bong-ro/DJI_0014.jpg',
+        '/assets/san-bong-ro/DJI_0016.jpg',
+        '/assets/san-bong-ro/DJI_0029.jpg',
+        '/assets/san-bong-ro/DJI_0983.jpg',
+        '/assets/san-bong-ro/DJI_0992.jpg',
       ],
     },
   ],

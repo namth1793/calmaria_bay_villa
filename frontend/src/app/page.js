@@ -7,6 +7,7 @@ import PriceTable from '@/components/PriceTable';
 import Gallery from '@/components/Gallery';
 import Reviews from '@/components/Reviews';
 import FAQ from '@/components/FAQ';
+import BookingSection from '@/components/BookingSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <Gallery />
         <Reviews />
         <FAQ />
+        <BookingSection />
       </main>
       <Footer />
     </>

@@ -13,7 +13,7 @@ const T = {
       { label: 'Phòng nghỉ', href: '#rooms' },
       { label: 'Bảng giá', href: '#pricing' },
       { label: 'Đánh giá', href: '#reviews' },
-      { label: 'Liên hệ', action: true },
+      { label: 'Đặt nguyên căn', href: '#booking' },
     ],
     contactTitle: 'Liên hệ',
     addr: 'Cảng Quốc Tế Tuần Châu, Hạ Long',
@@ -37,7 +37,7 @@ const T = {
       { label: 'Rooms', href: '#rooms' },
       { label: 'Pricing', href: '#pricing' },
       { label: 'Reviews', href: '#reviews' },
-      { label: 'Contact', action: true },
+      { label: 'Book Villa', href: '#booking' },
     ],
     contactTitle: 'Contact',
     addr: 'Tuan Chau International Port, Ha Long',
@@ -164,13 +164,7 @@ export default function Footer() {
               <ul className="space-y-2.5 text-sm text-gray-400">
                 {t.navLinks.map(l => (
                   <li key={l.label}>
-                    {l.action ? (
-                      <button onClick={() => setShowContact(true)} className="hover:text-white transition-colors">
-                        {l.label}
-                      </button>
-                    ) : (
-                      <a href={l.href} className="hover:text-white transition-colors">{l.label}</a>
-                    )}
+                    <a href={l.href} className="hover:text-white transition-colors">{l.label}</a>
                   </li>
                 ))}
               </ul>

@@ -5,16 +5,16 @@ import { Star, Quote } from 'lucide-react';
 
 const REVIEWS = {
   vi: [
-    { name: 'Trương Hoa', avatar: '👩', date: 'Nov 2025', rating: 5, text: 'Villa rất đẹp và sang trọng. Hồ bơi riêng tuyệt vời, không gian yên tĩnh. Gia đình chúng tôi rất hài lòng với kỳ nghỉ cuối tuần tại đây. Nhân viên phục vụ nhiệt tình. Sẽ quay lại lần sau!' },
-    { name: 'Bảo', avatar: '👨', date: 'Nov 2025', rating: 5, text: 'Không gian villa đẹp, view biển tuyệt, ăn ở thoải mái. Nhà có đầy đủ tiện nghi, phù hợp cho nhóm bạn hoặc gia đình lớn. Giá cũng hợp lý với chất lượng.' },
-    { name: 'T.B', avatar: '🧑', date: 'Oct 2025', rating: 5, text: 'Lần đầu tiên thuê nguyên căn villa ở Hạ Long và thực sự ấn tượng. Bãi biển riêng chỉ cách 30m, buổi sáng ra ngắm biển rất tuyệt. Xe điện trong khu villa tiện lợi lắm.' },
-    { name: 'Minh Châu', avatar: '👩', date: 'Sep 2025', rating: 5, text: 'Đặt villa cho nhóm 20 người dịp lễ 2/9. Không gian rộng rãi, đủ chỗ cho mọi người. Sân bóng rổ và bóng đá mini cho các bạn trẻ rất thú vị. Nhà rất sạch sẽ.' },
+    { name: 'Trương Hoa', avatar: '👩', date: 'Tháng 3, 2026', rating: 5, text: 'Villa rất đẹp và sang trọng. Hồ bơi riêng tuyệt vời, không gian yên tĩnh. Gia đình chúng tôi rất hài lòng với kỳ nghỉ cuối tuần tại đây. Nhân viên phục vụ nhiệt tình. Sẽ quay lại lần sau!' },
+    { name: 'Bảo', avatar: '👨', date: 'Tháng 3, 2026', rating: 5, text: 'Không gian villa đẹp, view biển tuyệt, ăn ở thoải mái. Nhà có đầy đủ tiện nghi, phù hợp cho nhóm bạn hoặc gia đình lớn. Giá cũng hợp lý với chất lượng.' },
+    { name: 'T.B', avatar: '🧑', date: 'Tháng 2, 2026', rating: 5, text: 'Lần đầu tiên thuê nguyên căn villa ở Hạ Long và thực sự ấn tượng. Bãi biển riêng chỉ cách 30m, buổi sáng ra ngắm biển rất tuyệt. Xe điện trong khu villa tiện lợi lắm.' },
+    { name: 'Minh Châu', avatar: '👩', date: 'Tháng 2, 2026', rating: 5, text: 'Đặt villa cho nhóm 20 người dịp Tết. Không gian rộng rãi, đủ chỗ cho mọi người. Sân bóng rổ và bóng đá mini cho các bạn trẻ rất thú vị. Nhà rất sạch sẽ.' },
   ],
   en: [
-    { name: 'Truong Hoa', avatar: '👩', date: 'Nov 2025', rating: 5, text: 'The villa is absolutely beautiful and luxurious. The private pool is amazing, and the peaceful surroundings were perfect. Our family had a wonderful weekend here. Staff were very attentive. Will definitely return!' },
-    { name: 'Bao', avatar: '👨', date: 'Nov 2025', rating: 5, text: 'The villa is stunning with breathtaking sea views and very comfortable. Fully equipped with everything you need — perfect for a large group of friends or family. Great value for the quality.' },
-    { name: 'T.B', avatar: '🧑', date: 'Oct 2025', rating: 5, text: 'First time renting a full villa in Ha Long and truly impressed. The private beach is just 30m away — incredible for a morning stroll. The electric buggies around the compound are a great touch.' },
-    { name: 'Minh Chau', avatar: '👩', date: 'Sep 2025', rating: 5, text: 'Booked the villa for a group of 20 for the Sep 2nd holiday. Spacious enough for everyone to enjoy. The basketball court and mini football field were a big hit with the younger guests. Very clean!' },
+    { name: 'Truong Hoa', avatar: '👩', date: 'March 2026', rating: 5, text: 'The villa is absolutely beautiful and luxurious. The private pool is amazing, and the peaceful surroundings were perfect. Our family had a wonderful weekend here. Staff were very attentive. Will definitely return!' },
+    { name: 'Bao', avatar: '👨', date: 'March 2026', rating: 5, text: 'The villa is stunning with breathtaking sea views and very comfortable. Fully equipped with everything you need — perfect for a large group of friends or family. Great value for the quality.' },
+    { name: 'T.B', avatar: '🧑', date: 'February 2026', rating: 5, text: 'First time renting a full villa in Ha Long and truly impressed. The private beach is just 30m away — incredible for a morning stroll. The electric buggies around the compound are a great touch.' },
+    { name: 'Minh Chau', avatar: '👩', date: 'February 2026', rating: 5, text: 'Booked the villa for a group of 20 for the Tet holiday. Spacious enough for everyone to enjoy. The basketball court and mini football field were a big hit with the younger guests. Very clean!' },
   ],
 };
 

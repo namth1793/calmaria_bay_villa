@@ -22,14 +22,14 @@ const HEADERS = {
 
 const NOTES = {
   vi: [
-    'Sức chứa tối đa: 20 người lớn + 10 trẻ em (tổng 30 người).',
+    'Trên 20 người lớn sẽ tính phụ thu.',
     'Trẻ từ 7–11 tuổi: phụ thu 200,000 VNĐ / bé / đêm.',
     'Từ 12 tuổi trở lên: phụ thu 400,000 VNĐ / người / đêm.',
     'Villa không cho phép thú cưng mang vào.',
     'Giá trên chưa bao gồm ăn sáng và tối. Vui lòng liên hệ để báo giá thêm.',
   ],
   en: [
-    'Maximum capacity: 20 adults + 10 children (30 guests total).',
+    'A surcharge will apply for groups of more than 20 adults.',
     'Children aged 7–11: surcharge of 200,000 VND / child / night.',
     'Aged 12 and above: surcharge of 400,000 VND / person / night.',
     'Pets are not allowed in the villa.',

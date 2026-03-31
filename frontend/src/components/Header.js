@@ -11,14 +11,14 @@ const NAV = {
     { label: 'Phòng nghỉ', href: '#rooms' },
     { label: 'Bảng giá', href: '#pricing' },
     { label: 'Đánh giá', href: '#reviews' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Đặt nguyên căn', href: '#booking' },
   ],
   en: [
     { label: 'Spaces', href: '#areas' },
     { label: 'Rooms', href: '#rooms' },
     { label: 'Pricing', href: '#pricing' },
     { label: 'Reviews', href: '#reviews' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Book Villa', href: '#booking' },
   ],
 };
 
@@ -168,12 +168,10 @@ export default function Header() {
                   <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-ocean-500 group-hover:w-full transition-all duration-300" />
                 </a>
               ))}
-              <button
-                onClick={() => setShowContact(true)}
-                className="text-sm font-medium text-gray-600 hover:text-ocean-600 transition-colors relative group">
-                {t.contact}
-                <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-ocean-500 group-hover:w-full transition-all duration-300" />
-              </button>
+              <a href="tel:0337866206"
+                className="px-4 py-2 bg-ocean-500 text-white rounded-full text-sm font-semibold hover:bg-ocean-600 transition-colors shadow-sm">
+                📞 {t.callNow}
+              </a>
               <LangToggle />
             </nav>
 
@@ -198,11 +196,10 @@ export default function Header() {
                   {link.label}
                 </a>
               ))}
-              <button
-                onClick={() => { setMenuOpen(false); setShowContact(true); }}
-                className="flex items-center w-full py-3 px-3 text-gray-700 hover:bg-ocean-50 hover:text-ocean-600 rounded-xl transition-colors font-medium">
-                {t.contact}
-              </button>
+              <a href="tel:0337866206" onClick={() => setMenuOpen(false)}
+                className="flex items-center py-3 px-3 text-ocean-600 hover:bg-ocean-50 rounded-xl transition-colors font-semibold">
+                📞 {t.callNow} — 0337 866 206
+              </a>
             </div>
           </div>
         )}
