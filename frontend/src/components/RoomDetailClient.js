@@ -9,7 +9,6 @@ import {
   Wifi, Utensils, Tv, Wind, Coffee, Lock, Droplets, ShowerHead
 } from 'lucide-react';
 
-// ── helpers ────────────────────────────────────────────
 function StarRating({ n }) {
   return (
     <div className="flex gap-0.5">
@@ -32,116 +31,73 @@ const amenityIcon = (label) => {
   return <Check size={16} />;
 };
 
-// ── Booking Widget ─────────────────────────────────────
-function BookingWidget({ room }) {
-  const [checkin, setCheckin] = useState('');
-  const [checkout, setCheckout] = useState('');
-  const [guests, setGuests] = useState(1);
-  const [loading, setLoading] = useState(false);
-  const [done, setDone] = useState(false);
-
-  const nights = (() => {
-    if (!checkin || !checkout) return 0;
-    const d = (new Date(checkout) - new Date(checkin)) / 86400000;
-    return d > 0 ? d : 0;
-  })();
-  const total = nights * room.price;
-
-  const handleBook = async () => {
-    if (!checkin || !checkout || nights <= 0) {
-      alert('Vui lòng chọn ngày nhận và trả phòng hợp lệ.');
-      return;
-    }
-    setLoading(true);
-    try {
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/bookings`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: 'Khách online', phone: '—', checkin, checkout, adults: guests, children: 0, special_request: `Phòng: ${room.fullName}` }),
-      });
-      setDone(true);
-    } catch { setDone(true); }
-    setLoading(false);
-  };
-
+// ── Contact Card ───────────────────────────────────────
+function ContactCard({ room }) {
   return (
     <div className="bg-white border border-sand-200 rounded-3xl shadow-xl p-6 sticky top-24">
-      <div className="flex items-baseline gap-2 mb-5">
-        <span className="text-2xl font-bold text-ocean-700">{room.price.toLocaleString('vi-VN')}</span>
-        <span className="text-gray-500 text-sm">đ / đêm</span>
+      <div className="text-center mb-5 pb-5 border-b border-sand-100">
+        <div className="w-14 h-14 bg-gradient-to-br from-ocean-400 to-ocean-600 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-md shadow-ocean-200">
+          <span className="text-2xl">🏖️</span>
+        </div>
+        <h3 className="font-serif text-lg font-bold text-gray-900">Calmaria Bay Villa</h3>
+        <p className="text-xs text-gray-400 mt-1">Cho thuê nguyên căn · 10 phòng ngủ</p>
       </div>
 
-      {done ? (
-        <div className="text-center py-4">
-          <div className="text-4xl mb-2">✅</div>
-          <p className="font-semibold text-green-700">Yêu cầu đã được gửi!</p>
-          <p className="text-sm text-gray-500 mt-1">Chúng tôi sẽ liên hệ sớm nhất.</p>
-          <button onClick={() => setDone(false)} className="mt-4 text-ocean-600 text-sm underline">Đặt lại</button>
+      {/* Room info summary */}
+      <div className="space-y-2.5 mb-5 pb-5 border-b border-sand-100">
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <BedDouble size={15} className="text-ocean-500 shrink-0" />
+          <span>{room.fullName}</span>
         </div>
-      ) : (
-        <>
-          {/* Date grid */}
-          <div className="border border-gray-200 rounded-2xl overflow-hidden mb-3">
-            <div className="grid grid-cols-2 divide-x divide-gray-200">
-              <div className="p-3">
-                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Nhận phòng</label>
-                <input type="date" value={checkin}
-                  min={new Date().toISOString().split('T')[0]}
-                  onChange={e => setCheckin(e.target.value)}
-                  className="w-full text-sm text-gray-800 outline-none cursor-pointer" />
-              </div>
-              <div className="p-3">
-                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Trả phòng</label>
-                <input type="date" value={checkout}
-                  min={checkin || new Date().toISOString().split('T')[0]}
-                  onChange={e => setCheckout(e.target.value)}
-                  className="w-full text-sm text-gray-800 outline-none cursor-pointer" />
-              </div>
-            </div>
-            <div className="border-t border-gray-200 p-3">
-              <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Số khách</label>
-              <select value={guests} onChange={e => setGuests(+e.target.value)}
-                className="w-full text-sm text-gray-800 outline-none">
-                {[...Array(room.guests)].map((_, i) => (
-                  <option key={i+1} value={i+1}>{i+1} khách</option>
-                ))}
-              </select>
-            </div>
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <LayoutGrid size={15} className="text-ocean-500 shrink-0" />
+          <span>{room.size}</span>
+        </div>
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <Users size={15} className="text-ocean-500 shrink-0" />
+          <span>{room.guests} khách</span>
+        </div>
+      </div>
+
+      {/* Contact options */}
+      <div className="space-y-3">
+        <a href="tel:0337866206"
+          className="flex items-center gap-3 p-3.5 bg-ocean-50 rounded-2xl hover:bg-ocean-100 transition-colors group">
+          <div className="w-9 h-9 bg-ocean-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+            <Phone size={16} className="text-white" />
           </div>
-
-          {/* Total */}
-          {nights > 0 && (
-            <div className="mb-3 space-y-2 text-sm">
-              <div className="flex justify-between text-gray-600">
-                <span>{room.price.toLocaleString('vi-VN')} × {nights} đêm</span>
-                <span>{total.toLocaleString('vi-VN')} đ</span>
-              </div>
-              <div className="flex justify-between font-bold text-gray-900 pt-2 border-t border-gray-100">
-                <span>Tổng cộng</span>
-                <span>{total.toLocaleString('vi-VN')} đ</span>
-              </div>
-            </div>
-          )}
-          {nights === 0 && (
-            <div className="flex justify-between text-sm text-gray-400 mb-3">
-              <span>Tổng cộng</span>
-              <span>0 đ</span>
-            </div>
-          )}
-
-          <button onClick={handleBook} disabled={loading}
-            className="w-full py-4 bg-ocean-500 text-white rounded-xl font-semibold hover:bg-ocean-600 transition-colors disabled:opacity-60">
-            {loading ? 'Đang gửi...' : 'Chọn ngày'}
-          </button>
-          <p className="text-center text-xs text-gray-400 mt-3">Vui lòng chọn tất cả trước khi đặt phòng</p>
-
-          <div className="mt-4 pt-4 border-t border-sand-100">
-            <a href="tel:0337866206" className="flex items-center gap-2 text-sm text-ocean-600 hover:underline">
-              <Phone size={14} /> 0337 866 206 (Zalo / Gọi)
-            </a>
+          <div>
+            <p className="text-xs text-gray-500">Điện thoại / Zalo</p>
+            <p className="font-bold text-gray-900 group-hover:text-ocean-700 text-sm">0337 866 206</p>
           </div>
-        </>
-      )}
+        </a>
+
+        <a href="https://zalo.me/0337866206" target="_blank" rel="noopener noreferrer"
+          className="flex items-center gap-3 p-3.5 bg-green-50 rounded-2xl hover:bg-green-100 transition-colors group">
+          <div className="w-9 h-9 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+            <span className="text-white font-bold text-sm">Z</span>
+          </div>
+          <div>
+            <p className="text-xs text-gray-500">Chat Zalo</p>
+            <p className="font-bold text-gray-900 group-hover:text-green-700 text-sm">Nhắn tin ngay</p>
+          </div>
+        </a>
+      </div>
+
+      <div className="mt-5 flex gap-2.5">
+        <a href="tel:0337866206"
+          className="flex-1 py-3 bg-ocean-500 text-white rounded-xl text-center font-semibold hover:bg-ocean-600 transition-colors text-sm shadow-sm">
+          Gọi ngay
+        </a>
+        <a href="/#booking"
+          className="flex-1 py-3 bg-gradient-to-r from-sand-400 to-sand-500 text-white rounded-xl text-center font-semibold hover:opacity-90 transition-opacity text-sm shadow-sm">
+          Đặt nguyên căn
+        </a>
+      </div>
+
+      <p className="text-center text-xs text-gray-400 mt-3">
+        Xác nhận trong vòng 24 giờ
+      </p>
     </div>
   );
 }
@@ -230,8 +186,8 @@ function SimilarRooms({ allRooms, similarIds }) {
               <Image src={room.images[0]} alt={room.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-4">
-              <p className="font-medium text-gray-800 text-sm leading-snug mb-1">{room.fullName}</p>
-              <p className="text-ocean-700 font-bold text-sm">{room.price.toLocaleString('vi-VN')} đ<span className="font-normal text-gray-400">/đêm</span></p>
+              <p className="font-medium text-gray-800 text-sm leading-snug">{room.fullName}</p>
+              <p className="text-xs text-gray-400 mt-1">{room.size} · {room.view}</p>
             </div>
           </Link>
         ))}
@@ -298,8 +254,9 @@ export default function RoomDetailClient({ room, allRooms }) {
               ))}
             </div>
             <div className="hidden sm:flex items-center gap-3 pl-4 border-l border-sand-100">
-              <span className="text-xs font-medium bg-red-50 text-red-600 px-3 py-1.5 rounded-full">🇻🇳 Tiếng Việt</span>
-              <a href="#contact-detail" className="text-sm font-medium text-gray-700 hover:text-ocean-600">Liên hệ</a>
+              <a href="tel:0337866206" className="text-sm font-medium text-ocean-600 hover:underline flex items-center gap-1">
+                <Phone size={13} /> 0337 866 206
+              </a>
             </div>
           </div>
         </div>
@@ -340,7 +297,7 @@ export default function RoomDetailClient({ room, allRooms }) {
 
             {/* About */}
             <section className="border-t border-sand-200 pt-8">
-              <h2 className="font-serif text-2xl font-bold text-gray-900 mb-4">About this space</h2>
+              <h2 className="font-serif text-2xl font-bold text-gray-900 mb-4">Về phòng này</h2>
               <div className={`text-gray-600 leading-relaxed text-sm whitespace-pre-line overflow-hidden transition-all duration-300 ${showAll ? '' : 'max-h-32'}`}>
                 {room.about}
               </div>
@@ -352,7 +309,7 @@ export default function RoomDetailClient({ room, allRooms }) {
 
             {/* Bedrooms */}
             <section className="border-t border-sand-200 pt-8">
-              <h2 className="font-serif text-2xl font-bold text-gray-900 mb-5">Giường ngủ</h2>
+              <h2 className="font-serif text-2xl font-bold text-gray-900 mb-5">Nội thất phòng ngủ</h2>
               <div className="flex flex-wrap gap-4">
                 {room.bedrooms_detail.map((bd, i) => (
                   <div key={i} className="bg-sand-50 rounded-2xl border border-sand-200 p-5 min-w-[160px]">
@@ -380,9 +337,6 @@ export default function RoomDetailClient({ room, allRooms }) {
                   </div>
                 ))}
               </div>
-              <button className="mt-5 px-5 py-2.5 border border-gray-800 rounded-xl text-sm font-medium hover:bg-gray-50 transition-colors">
-                Xem thêm {room.amenities.length} tiện ích
-              </button>
             </section>
 
             {/* Reviews */}
@@ -418,11 +372,6 @@ export default function RoomDetailClient({ room, allRooms }) {
                   </motion.div>
                 ))}
               </div>
-              {room.reviews.length > 3 && (
-                <button className="mt-5 px-5 py-2.5 border border-gray-800 rounded-xl text-sm font-medium hover:bg-gray-50 transition-colors">
-                  Xem thêm {room.reviews.length} đánh giá
-                </button>
-              )}
             </section>
 
             {/* Address & Map */}
@@ -463,28 +412,30 @@ export default function RoomDetailClient({ room, allRooms }) {
 
           </div>
 
-          {/* RIGHT: Booking Widget */}
+          {/* RIGHT: Contact Card */}
           <div className="hidden lg:block">
-            <BookingWidget room={room} />
+            <ContactCard room={room} />
           </div>
         </div>
 
-        {/* Mobile booking bar */}
-        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-sand-200 p-4 flex items-center justify-between z-40">
-          <div>
-            <span className="font-bold text-ocean-700">{room.price.toLocaleString('vi-VN')}</span>
-            <span className="text-gray-400 text-sm"> đ/đêm</span>
-          </div>
-          <a href="#booking-mobile"
-            className="px-6 py-3 bg-ocean-500 text-white rounded-xl font-semibold hover:bg-ocean-600 transition-colors text-sm">
-            Đặt phòng
+        {/* Mobile contact bar */}
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-sand-200 p-4 flex items-center justify-between gap-3 z-40">
+          <a href="tel:0337866206"
+            className="flex-1 py-3 bg-ocean-500 text-white rounded-xl font-semibold hover:bg-ocean-600 transition-colors text-sm text-center">
+            📞 Gọi ngay
           </a>
+          <a href="https://zalo.me/0337866206" target="_blank" rel="noopener noreferrer"
+            className="flex-1 py-3 bg-green-500 text-white rounded-xl font-semibold hover:bg-green-600 transition-colors text-sm text-center">
+            Zalo
+          </a>
+          <Link href="/#booking"
+            className="flex-1 py-3 bg-gradient-to-r from-ocean-500 to-ocean-600 text-white rounded-xl font-semibold text-sm text-center">
+            Đặt nguyên căn
+          </Link>
         </div>
-        {/* Mobile booking widget */}
-        <div id="booking-mobile" className="lg:hidden mt-10 border-t border-sand-200 pt-8">
-          <h2 className="font-serif text-2xl font-bold text-gray-900 mb-5">Đặt phòng</h2>
-          <BookingWidget room={room} />
-        </div>
+
+        {/* Bottom spacing for mobile bar */}
+        <div className="lg:hidden h-20" />
       </div>
 
       <style jsx global>{`

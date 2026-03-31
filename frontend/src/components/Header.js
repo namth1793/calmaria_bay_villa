@@ -7,12 +7,14 @@ import { useEffect, useState } from 'react';
 
 const NAV = {
   vi: [
-    { label: 'Phòng', href: '#rooms' },
+    { label: 'Không gian', href: '#areas' },
+    { label: 'Phòng nghỉ', href: '#rooms' },
     { label: 'Bảng giá', href: '#pricing' },
     { label: 'Đánh giá', href: '#reviews' },
     { label: 'FAQ', href: '#faq' },
   ],
   en: [
+    { label: 'Spaces', href: '#areas' },
     { label: 'Rooms', href: '#rooms' },
     { label: 'Pricing', href: '#pricing' },
     { label: 'Reviews', href: '#reviews' },
